@@ -1,0 +1,102 @@
+html {
+    --accent-color: hotpink;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-rendering: optimizeSpeed;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    background-image: url('gyro.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 300px;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background-color: var(--accent-color);
+    background-blend-mode: multiply;
+}
+
+::selection {
+    color: var(--accent-color);
+    background: black;
+}
+
+body {
+    max-width: 900px;
+    margin: 20px;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1em;
+    background: var(--accent-color);
+    display: table;
+    padding: 0.8em 1em;
+    margin-top: 40px;
+    margin-bottom: 1px;
+}
+
+h3 {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+header {
+    display: block;
+    background: var(--accent-color);
+    padding: 20px;
+}
+
+header > *:not(h1) {
+    margin-right: 20px;
+    display: inline-block;
+    margin-bottom: 0.8em;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        width: 100%;
+    }
+    header {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+h2 + ul {
+    margin-top: 1px;
+}
+
+li {
+    display: table;
+    background: var(--accent-color);
+    padding: 20px;
+    /* margin-bottom: 20px; */
+    margin-bottom: 1px;
+}
+
+p {
+    margin-bottom: 0;
+    line-height: 1.6em;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover, a:active {
+    color: var(--accent-color);
+    background-color: black;
+    display: table;
+}
