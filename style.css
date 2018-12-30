@@ -14,6 +14,7 @@ html {
     image-rendering: pixelated;
     background-color: var(--accent-color);
     background-blend-mode: multiply;
+    line-height: 1.6em;
 }
 
 ::selection {
@@ -22,22 +23,44 @@ html {
 }
 
 body {
-    max-width: 900px;
-    margin: 20px;
+    max-width: 800px;
+    margin: 60px 20px;
 }
 
 h1 {
-    margin: 0;
+    margin-top: 2em;
     margin-bottom: 0.5em;
+    margin-left: -0.1em;
+    font-size: 2.8em;
 }
 
 h2 {
+    letter-spacing: 0.04em;
+    position: relative;
     font-size: 1em;
-    background: var(--accent-color);
+    background: black;
+    color: var(--accent-color);
     display: table;
-    padding: 0.8em 1em;
     margin-top: 40px;
-    margin-bottom: 1px;
+    padding: 0.6em 0.8em;
+    margin-bottom: -3px;
+    margin-left: 1px;
+    border: 1px solid var(--accent-color);
+    user-select: none;
+}
+
+h2::selection {
+    color: black;
+    background: var(--accent-color);
+}
+
+@media screen and (min-width: 800px) {
+    h2 {
+        padding: 0.6em 0.8em;
+        margin-left: -0.6em;
+        margin-bottom: -0.6em;
+        position: relative;
+    }
 }
 
 h3 {
@@ -49,23 +72,36 @@ h3 {
 header {
     display: block;
     background: var(--accent-color);
-    padding: 20px;
 }
 
-header > *:not(h1) {
+header > section {
+    padding: 20px;
+    border: 1px solid black;
+    margin-bottom: -1px;
+    align-items: flex-end;
+}
+
+header > section:first-child {
+    display: block;
+    background-image: repeating-linear-gradient(90deg, var(--accent-color), var(--accent-color) 6px, rgba(0,0,0,0.5) 7px);
+    background-position: center;
+}
+
+header > section.socials > * {
     margin-right: 20px;
-    display: inline-block;
-    margin-bottom: 0.8em;
+    display: block;
+}
+
+header > section > div {
     display: table;
+    margin-top: 1em;
+    padding-right: 0.5em;
+    background: var(--accent-color);
 }
 
 @media screen and (min-width: 800px) {
-    h1 {
-        width: 100%;
-    }
-    header {
+    header > section {
         display: flex;
-        align-items: baseline;
         flex-wrap: wrap;
     }
 }
@@ -83,13 +119,12 @@ li {
     display: table;
     background: var(--accent-color);
     padding: 20px;
-    /* margin-bottom: 20px; */
-    margin-bottom: 1px;
+    border: 1px solid black;
+    margin-bottom: -1px;
 }
 
 p {
     margin-bottom: 0;
-    line-height: 1.6em;
 }
 
 a {
