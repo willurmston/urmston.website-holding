@@ -151,9 +151,11 @@ footer {
 }
 
 footer > div {
+    max-width: 400px;
     background: black;
     padding: 1em 1em;
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 6px, var(--accent-color) 7px);
+    background-color: var(--accent-color);
+    background-image: repeating-linear-gradient(90deg, black, black 6px, rgba(0,0,0,0.5) 7px);
     background-position: center;
     border: 1px solid var(--accent-color);
     display: flex;
