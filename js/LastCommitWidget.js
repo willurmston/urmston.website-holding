@@ -81,7 +81,7 @@ class LastCommitWidget extends HTMLElement {
             <main>
                 ${this.styleTag()}
                 <div>
-                    Last Commit ${day} at ${timeWithSeparators}
+                    Last commit ${day} at ${timeWithSeparators}
                 </div>
                 <div>
                     <a href="${commit.html_url}" target="_blank">${commit.sha.substring(0,7)}</a>:
