@@ -25,6 +25,13 @@ class LastCommitWidget extends HTMLElement {
                 .blink {
                     animation: blink 2s both steps(1) infinite;
                 }
+                a {
+                    color: inherit;
+                }
+                a:hover {
+                    background: var(--accent-color);
+                    color: black;
+                }
             </style>
         `
     }
@@ -77,7 +84,8 @@ class LastCommitWidget extends HTMLElement {
                     Last Commit ${day} at ${timeWithSeparators}
                 </div>
                 <div>
-                    ${commit.sha.substring(0,7)}: <em>"${commit.message}"</em>
+                    <a href="${commit.html_url}" target="_blank">${commit.sha.substring(0,7)}</a>:
+                    <span> "${commit.message}"</span>
                 </div>
             </main>
         `)
