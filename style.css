@@ -156,4 +156,11 @@ footer > div {
     background-image: repeating-linear-gradient(90deg, transparent, transparent 6px, var(--accent-color) 7px);
     background-position: center;
     border: 1px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+last-commit-widget {
+    margin-bottom: 0.5em;
 }
