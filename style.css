@@ -136,3 +136,24 @@ a:hover, a:active {
     color: var(--accent-color);
     background-color: black;
 }
+
+footer {
+    display: table;
+    text-align: center;
+    font-size: 16px;
+    color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    color: var(--accent-color, white);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 16px;
+    margin-top: 80px;
+}
+
+footer > div {
+    background: black;
+    padding: 1em 1em;
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 6px, var(--accent-color) 7px);
+    background-position: center;
+    border: 1px solid var(--accent-color);
+}

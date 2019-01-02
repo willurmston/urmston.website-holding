@@ -74,9 +74,17 @@
                 Current interests: peer-to-peer web tech, social equity, DJing, privacy, public transportation + urban planning, libraries...
             </li>
         </ul>
+        <footer>
+            <div>
+                <weather-widget zone="WAZ558"></weather-widget>
+                <div>(c) Will Urmston</div>
+            </div>
+        </footer>
+        <script type="module" src="js/WeatherWidget.js"></script>
         <script>
             const colors = ['LightPink', 'aqua', 'Coral', 'gold', 'PaleGreen']
-            document.documentElement.style.setProperty('--accent-color', colors[Math.floor(Math.random() * colors.length)])
+            const color = colors[Math.floor(Math.random() * colors.length)]
+            document.documentElement.style.setProperty('--accent-color', color)
         </script>
     </body>
 </html>
