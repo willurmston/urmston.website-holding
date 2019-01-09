@@ -8,12 +8,11 @@ html {
     background-image: url('gyro.png');
     background-position: center;
     background-attachment: fixed;
-    background-size: 300px;
+    background-size: 280px;
     image-rendering: auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
     background-color: var(--accent-color);
-    background-blend-mode: multiply;
     line-height: 1.6em;
 }
 
@@ -66,7 +65,8 @@ h2::selection {
 h3 {
     font-size: 1em;
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
+    line-height: 1.4;
 }
 
 header {
