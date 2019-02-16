@@ -32,14 +32,14 @@ class WeatherWidget extends HTMLElement {
         `
     }
 
-    async getWeather (zone) {
-        const response = await fetch(`https://api.weather.gov/zones/forecast/${zone}/observations?limit=10`)
+    async getWeather (station) {
+        const response = await fetch(`https://api.weather.gov/stations/${station}/observations?limit=1`)
         const weather = await response.json()
         return weather.features[0].properties
     }
 
     async attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'zone') {
+        if (name === 'station') {
             this.weather = await this.getWeather(newValue)
             this.render(this.weather)
         }
@@ -69,6 +69,6 @@ class WeatherWidget extends HTMLElement {
     }
 }
 
-WeatherWidget.observedAttributes = ['zone']
+WeatherWidget.observedAttributes = ['station']
 
 window.customElements.define('weather-widget', WeatherWidget)
