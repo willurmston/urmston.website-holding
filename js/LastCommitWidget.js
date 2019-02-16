@@ -11,20 +11,6 @@ class LastCommitWidget extends HTMLElement {
                 :host {
                     display: block;
                 }
-                @keyframes blink {
-                    0% {
-                        opacity: 0;
-                    }
-                    50% {
-                        opacity: 1;
-                    }
-                    100% {
-                        opacity: 0;
-                    }
-                }
-                .blink {
-                    animation: blink 2s both steps(1) infinite;
-                }
                 a {
                     color: inherit;
                 }
@@ -69,19 +55,11 @@ class LastCommitWidget extends HTMLElement {
             minute: 'numeric',
             second: 'numeric'
         })
-        const timeWithSeparators = time.split('').map(character => {
-            if (character === ':') {
-                return yo`<span class="blink">:</span>`
-            } else {
-                return character
-            }
-        })
-
         yo.update(this.shadow.firstChild, yo`
             <main>
                 ${this.styleTag()}
                 <div>
-                    Last commit ${day} at ${timeWithSeparators}
+                    Last commit ${day} at ${time}
                 </div>
                 <div>
                     <a href="${commit.html_url}" target="_blank">${commit.sha.substring(0,7)}</a>:
