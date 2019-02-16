@@ -1,0 +1,20 @@
+{
+  "name": "urmston.website-holding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willurmston/urmston.website-holding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willurmston/urmston.website-holding/issues"
+  },
+  "homepage": "https://github.com/willurmston/urmston.website-holding#readme"
+}
