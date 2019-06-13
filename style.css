@@ -121,7 +121,7 @@ li {
     background: var(--accent-color);
     padding: 20px;
     border: 1px solid black;
-    margin-bottom: -1px;
+    margin-bottom: 10px;
 }
 
 p {
