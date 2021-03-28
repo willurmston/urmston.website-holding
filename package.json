@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/willurmston/urmston.website-holding/issues"
   },
-  "homepage": "https://github.com/willurmston/urmston.website-holding#readme"
+  "homepage": "https://github.com/willurmston/urmston.website-holding#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
 }
