@@ -88,18 +88,29 @@ header > section {
   }
 }
 
-header > section:first-child {
+.title-card {
   background-image: repeating-linear-gradient(
     90deg,
     var(--accent-color),
-    var(--accent-color) 6px,
-    rgba(0, 0, 0, 0.5) 7px
+    var(--accent-color) 9.5px,
+    rgba(0, 0, 0, 1) 9.5px,
+    rgba(0, 0, 0, 1) 10px
   );
   background-position: center;
 }
 
+.title-card h1 {
+  text-shadow: 
+    -1px -1px 0px var(--accent-color), 
+    1px -1px 0px var(--accent-color),
+    1px 1px 0px var(--accent-color),
+    -1px 1px 0px var(--accent-color);
+}
+
 .socials {
   padding: 0;
+  margin: 0;
+  border: 1px solid black;
 }
 .socials > a {
   padding: 0.7em 1em;
@@ -151,7 +162,7 @@ h2 + ul {
   margin-top: 1px;
 }
 
-li {
+.item {
   display: table;
   background: var(--accent-color);
   padding: 1em;
@@ -159,7 +170,7 @@ li {
   margin-bottom: 0.8em;
 }
 @media screen and (min-width: 800px) {
-  li {
+  .item {
     padding: 1.3em 1.4em;
     margin-bottom: -1px;
   }
